@@ -1,2 +1,3 @@
-# task-api
-FastAPI task manager
+Git + FastAPI
+
+**Автор**: Kokontsev
