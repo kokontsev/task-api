@@ -13,3 +13,12 @@ async def client():
         base_url="http://test",
     ) as c:
         yield c
+
+@pytest_asyncio.fixture
+async def sample_task(client):
+    # создаёт одну задачу через тот же client и возвращает её id
+    response = await client.post(
+        "/tasks",
+        json={"title": "sample task", "description": "sample description"},
+    )
+    return response.json()["id"]
