@@ -1,6 +1,6 @@
 from httpx import ASGITransport, AsyncClient
 import pytest
-from main import app
+from app.main import app
 
 
 async def test_health(client):
